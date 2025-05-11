@@ -1,0 +1,96 @@
+@import './profile.css';
+
+.profile-page main.profile-main {
+    /*Transform*/
+    position: relative;
+    margin: 20px 0px;
+    /*Children*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+    .profile-page main.profile-main p.text {
+        /*Transform*/
+        margin: 10px 0px;
+        /*Text*/
+        font-size: 20px;
+        color: var(--text);
+    }
+
+        .profile-page main.profile-main p.text.off-locked {
+            opacity: 0;
+        }
+
+        .profile-page main.profile-main p.text.on-locked {
+            opacity: 1;
+        }
+
+        .profile-page main.profile-main p.text.off-to-on {
+            animation: appear 1s ease-in-out;
+            opacity: 1;
+        }
+
+        .profile-page main.profile-main p.text.on-to-off {
+            animation: disappear 1s ease-in-out;
+            opacity: 0;
+        }
+
+    .profile-page main.profile-main div {
+        /*Transform*/
+        position: absolute;
+        top: 0px;
+        width: 2px;
+        height: 100%;
+        /*Visual*/
+        background-color: #999;
+    }
+
+        .profile-page main.profile-main div.leftBar {
+            /*Transform*/
+            left: -17px;
+        }
+
+            .profile-page main.profile-main div.leftBar.on-locked,
+            .profile-page main.profile-main div.rightBar.on-locked {
+                transform: translateX(0px);
+            }
+
+            .profile-page main.profile-main div.leftBar.off-locked {
+                transform: translateX(-50px);
+            }
+
+            .profile-page main.profile-main div.leftBar.off-to-on {
+                animation: main-left-bar-appear 1s ease-out;
+                transform: translateX(0px);
+            }
+
+            .profile-page main.profile-main div.leftBar.on-to-off {
+                animation: main-left-bar-disappear 1s ease-out;
+                transform: translateX(-50px);
+            }
+
+        .profile-page main.profile-main div.rightBar {
+            /*Transform*/
+            right: -17px;
+        }
+
+            .profile-page main.profile-main div.rightBar.off-locked {
+                transform: translateX(50px);
+            }
+
+            .profile-page main.profile-main div.rightBar.off-to-on {
+                animation: main-right-bar-appear 1s ease-out;
+                transform: translateX(0px);
+            }
+
+            .profile-page main.profile-main div.rightBar.on-to-off {
+                animation: main-right-bar-disappear 1s ease-out;
+                transform: translateX(50px);
+            }
+
+@media (max-width: 600px) {
+    .profile-page main.profile-main p.text {
+        font-size: 3.3vw;
+    }
+}

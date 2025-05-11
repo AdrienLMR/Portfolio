@@ -1,0 +1,14 @@
+@import './hud.css';
+
+/*BlurryBackground*/
+.hud div.hud-blurry-background {
+    /*Transform*/
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    /*Visual*/
+    animation: hud-blurry-background 1s ease;
+    backdrop-filter: blur(3px);
+}
+/*End BlurryBackground*/

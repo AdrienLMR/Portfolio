@@ -1,0 +1,136 @@
+@import './game.css';
+
+.game-page section.game-images {
+    /*Transform*/
+    z-index: 1;
+    margin: 5vw 0px 0px 0px;
+    /*Childrens*/
+    display: flex;
+    justify-content: space-between;
+}
+
+    .game-page section.game-images div.side-container {
+        /*Transform*/
+        width: 22.5%;
+        aspect-ratio: 1;
+        /*Childrens*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .game-page section.game-images div.side-container div.blank {
+            /*Transform*/
+            margin: 10px;
+            height: 45%;
+            /*Visuals*/
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 3px dashed rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .game-page section.game-images div.side-container button.image-container {
+            /*Transform*/
+            height: 45%;
+            /*Visuals*/
+            background-color: transparent;
+            border: 3px solid transparent;
+            border-radius: 10px;
+            /*Childrens*/
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .game-page section.game-images div.side-container button.image-container.on-locked {
+                border-color: transparent;
+            }
+
+            .game-page section.game-images div.side-container button.image-container.hover-locked {
+                border-color: white;
+            }
+
+            .game-page section.game-images div.side-container button.image-container.on-to-hover {
+                animation: images-container-hover 0.3s ease-in-out;
+                border-color: white;
+            }
+
+            .game-page section.game-images div.side-container button.image-container.hover-to-on {
+                animation: images-container-unhover 0.3s ease-in-out;
+                border-color: transparent;
+            }
+
+            .game-page section.game-images div.side-container button.image-container img {
+                /*Transform*/
+                height: auto;
+            }
+
+                .game-page section.game-images div.side-container button.image-container img.image.on-locked {
+                    width: 100%;
+                }
+
+                .game-page section.game-images div.side-container button.image-container img.image.hover-locked {
+                    width: 120%;
+                }
+
+                .game-page section.game-images div.side-container button.image-container img.image.on-to-hover {
+                    animation: game-images-hover 0.3s ease-in-out;
+                    width: 120%;
+                }
+
+                .game-page section.game-images div.side-container button.image-container img.image.hover-to-on {
+                    animation: game-images-unhover 0.3s ease-in-out;
+                    width: 100%;
+                }
+
+    .game-page section.game-images div.container {
+        /*Transform*/
+        position: relative;
+        width: 50%;
+        /*Visuals*/
+        border-radius: 20px;
+        /*Childrens*/
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+        .game-page section.game-images div.container img.middle {
+            /*Transform*/
+            width: 100%;
+            height: auto;
+        }
+
+        .game-page section.game-images div.container div.fade-in-out {
+            /*Transform*/
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+        }
+
+            .game-page section.game-images div.container div.fade-in-out.off-to-on {
+                animation: hider-appear 0.3s ease-in-out;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            .game-page section.game-images div.container div.fade-in-out.off-locked {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .game-page section.game-images div.container div.fade-in-out.on-to-off {
+                animation: hider-disappear 0.3s ease-in-out;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .game-page section.game-images div.container div.fade-in-out.on-locked {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+@media (max-width: 800px) {
+    .game-page section.game-images div.container {
+        width: 100%;
+    }
+}

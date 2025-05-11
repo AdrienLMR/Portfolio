@@ -1,0 +1,60 @@
+/*GameImages*/
+@keyframes game-images-hover {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 120%;
+    }
+}
+
+@keyframes game-images-unhover {
+    0% {
+        width: 120%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes images-container-hover {
+    0% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: white;
+    }
+}
+
+@keyframes images-container-unhover {
+    0% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes hider-appear {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes hider-disappear {
+    0% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

@@ -1,0 +1,5 @@
+img.particle {
+    z-index: 0;
+    position: absolute;
+    background-size: 8px;
+}

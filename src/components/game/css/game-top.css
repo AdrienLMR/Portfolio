@@ -1,0 +1,105 @@
+.game-page section.game-top {
+    /*Transform*/
+    z-index: 1;
+    margin: 0px 0px 100px 0px;
+    height: 150px;
+    width: 100vw;
+    /*Childrens*/
+    display: flex;
+    align-items: flex-end;
+}
+
+    .game-page section.game-top div.game-profile {
+        /*Transform*/
+        margin: 0px 0px -40px 0px;
+        height: 100px;
+        width: 100%;
+        /*Childrens*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .game-page section.game-top div.game-profile div.left-container {
+            /*Transform*/
+            margin: 0px 0px 0px 100px;
+            width: 75%;
+            /*Childrens*/
+            display: flex;
+            align-items: center
+        }
+
+            .game-page section.game-top div.game-profile div.left-container img.game-logo {
+                /*Transform*/
+                height: 100px;
+                width: 200px;
+                /*Visuals*/
+                background-color: black;
+                border: 5px solid black;
+                border-radius: 10px;
+            }
+
+            .game-page section.game-top div.game-profile div.left-container p.title {
+                /*Transform*/
+                margin: 0px 0px 40px 15px;
+                width: 100%;
+                /*Test*/
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+        .game-page section.game-top div.game-profile img.no-download,
+        .game-page section.game-top div.game-profile a.download-button {
+            /*Transform*/
+            margin: 0px 40px 0px auto;
+            width: 75px;
+            height: 75px;
+            /*Visuals*/
+            background-size: cover;
+        }
+
+            .game-page section.game-top div.game-profile a.download-button.on-locked {
+                background-image: url(../../../../public/games/download.png);
+            }
+
+            .game-page section.game-top div.game-profile a.download-button.hover-locked {
+                background-image: url(../../../../public/games/download-hover.png);
+            }
+
+@media (max-width: 900px) {
+    .game-page section.game-top {
+        margin: 0px 0px 11vw 0px;
+    }
+
+    .game-page section.game-top div.game-profile {
+        margin: 0px 0px -4.3vw 0px;
+        height: 11vw;
+    }
+
+        .game-page section.game-top div.game-profile div.left-container {
+            margin: 0px 0px 0px 11vw;
+        }
+
+            .game-page section.game-top div.game-profile div.left-container img.game-logo {
+                height: 11vw;
+                width: 22vw;
+            }
+
+            .game-page section.game-top div.game-profile div.left-container p.title {
+                margin: 0px 0px 4.2vw 1.6vw;
+                font-size: 4.45vw;
+            }
+
+        .game-page section.game-top div.game-profile img.no-download,
+        .game-page section.game-top div.game-profile a.download-button {
+            margin: 0px 4.2vw 0px auto;
+            width: 8vw;
+            height: 8vw;
+        }
+}
+
+@media (max-width: 550px) {
+    .game-page section.game-top {
+        height: 27vw;
+    }
+}

@@ -1,0 +1,65 @@
+@import './profile.css';
+
+:root .profile-interests {
+    --top-left: -27px;
+    --bottom-right: 27px;
+}
+
+.profile-page section.profile-interests {
+    /*Transform*/
+    position: relative;
+    margin: 5vw 0px;
+}
+
+    .profile-page section.profile-interests p.title {
+        /*Transform*/
+        margin: 15px 0px;
+        /*Children*/
+        display: flex;
+        justify-content: center;
+        /*Text*/
+        color: var(--text);
+        font-size: 24px;
+    }
+
+    .profile-page section.profile-interests ul.interests-elements {
+        /*Transform*/
+        margin: 10px 0px;
+    }
+
+        .profile-page section.profile-interests ul.interests-elements p.text {
+            /*Transform*/
+            margin: 20px 0px;
+            /*Text*/
+            color: var(--text);
+            font-size: 17px;
+        }
+
+            .profile-page section.profile-interests ul.interests-elements p.text.off-locked {
+                opacity: 0;
+            }
+
+            .profile-page section.profile-interests ul.interests-elements p.text.on-locked {
+                opacity: 1;
+            }
+
+            .profile-page section.profile-interests ul.interests-elements p.text.off-to-on {
+                animation: appear 0.5s ease-in-out;
+                opacity: 1;
+            }
+
+            .profile-page section.profile-interests ul.interests-elements p.text.on-to-off {
+                animation: disappear 0.5s ease-in-out;
+                opacity: 0;
+            }
+
+@media (max-width: 500px) {
+        .profile-page section.profile-interests p.title {
+            font-size: 5vw;
+        }
+
+        .profile-page section.profile-interests ul.interests-elements p.text {
+            margin: 4vw 0px;
+            font-size: 3.4vw;
+        }
+}

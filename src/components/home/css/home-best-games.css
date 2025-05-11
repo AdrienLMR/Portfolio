@@ -1,0 +1,204 @@
+@import './home.css';
+
+.home-page main.best-games {
+    /*Childrens*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .home-page main.best-games p.title {
+        /*Transform*/
+        height: 75px;
+        /*Childrens*/
+        display: flex;
+        align-items: center;
+        /*Text*/
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .home-page main.best-games ul.game-cards {
+        /*Transform*/
+        margin: 10px 0px;
+        width: 80%;
+        /*Childrens*/
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        /*Visual*/
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 3px solid black;
+        border-radius: 15px;
+    }
+
+        .home-page main.best-games ul.game-cards div.card {
+            /*Transform*/
+            margin: 25px 20px;
+            width: 250px;
+            height: auto;
+            aspect-ratio: 5/6;
+            /*Childrens*/
+            perspective: 800px;
+        }
+
+            .home-page main.best-games ul.game-cards div.card div.recto,
+            .home-page main.best-games ul.game-cards div.card div.verso {
+                /*Transform*/
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                /*Visual*/
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            .home-page main.best-games ul.game-cards div.card div.recto {
+                /*Childrens*/
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+                .home-page main.best-games ul.game-cards div.card div.recto.off-to-on {
+                    animation: game-card-appear 0.5s ease-out;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto.on-locked {
+                    transform: rotate3d(0, 1, 0, 0deg);
+                    opacity: 1;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto.hover-locked {
+                    transform: rotate3d(0, 1, 0, -90deg);
+                    opacity: 0;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto.on-to-hover {
+                    animation: game-card-rotate-off 1s ease-out;
+                    transform: rotate3d(0, 1, 0, -90deg);
+                    opacity: 0;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto.hover-to-on {
+                    animation: game-card-rotate-on 1s ease-out;
+                    transform: rotate3d(0, 1, 0, 0deg);
+                    opacity: 1;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto p.title {
+                    /*Transform*/
+                    margin: 5% 0px;
+                    height: 10%;
+                    /*Text*/
+                    font-size: var(--font-size-component-title);
+                    font-weight: bold;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto img.photo {
+                    max-height: 35%;
+                    /*max-height: 30%;*/
+                    max-width: 90%;
+                    border-radius: 10px;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.recto div.text-container {
+                    /*Transform*/
+                    margin: 5% 0px;
+                    height: 50%;
+                    width: 70%;
+                    /*Childrens*/
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                    .home-page main.best-games ul.game-cards div.card div.recto div.text-container p.text {
+                        /*Visuals*/
+                        font-size: var(--font-size-component-subtitle);
+                        font-weight: bold;
+                    }
+
+                    .home-page main.best-games ul.game-cards div.card div.recto div.text-container p.game-from {
+                        /*Visuals*/
+                        font-size: var(--font-size-component-text);
+                    }
+
+            .home-page main.best-games ul.game-cards div.card div.verso {
+                /*Childrens*/
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+                .home-page main.best-games ul.game-cards div.card div.verso.off-to-on {
+                    opacity: 0;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.verso.on-locked {
+                    transform: rotate3d(0, 1, 0, 90deg);
+                    opacity: 0;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.verso.hover-locked {
+                    transform: rotate3d(0, 1, 0, 0deg);
+                    opacity: 1;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.verso.on-to-hover {
+                    animation: game-card-rotate-on 1s ease-out;
+                    transform: rotate3d(0, 1, 0, 0deg);
+                    opacity: 1;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.verso.hover-to-on {
+                    animation: game-card-rotate-off 1s ease-out;
+                    transform: rotate3d(0, 1, 0, 90deg);
+                    opacity: 0;
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.verso p.text {
+                    /*Transform*/
+                    margin: 15px 0px 0px 0px;
+                    width: 80%;
+                    /*Visuals*/
+                    font-size: var(--font-size-component-text);
+                }
+
+                .home-page main.best-games ul.game-cards div.card div.verso a.click-to-open {
+                    /*Transform*/
+                    margin: 0px 0px 20px 0px;
+                    width: 80%;
+                    /*Visuals*/
+                    font-size: var(--font-size-component-title);
+                    font-weight: bold;
+                    color: var(--yellow);
+                }
+
+@media (max-width: 600px) {
+    .home-page main.best-games ul.game-cards div.card {
+        margin: 4vw 4vw;
+    }
+}
+
+@media (max-width: 375px) {
+    .home-page main.best-games p.title {
+        height: 20vw;
+        font-size: 8vw;
+    }
+
+    .home-page main.best-games ul.game-cards div.card div.recto p.title,
+    .home-page main.best-games ul.game-cards div.card div.verso a.click-to-open {
+        font-size: 5.4vw;
+    }
+
+    .home-page main.best-games ul.game-cards div.card div.recto div.text-container p.text {
+        font-size: 4.2vw;
+    }
+
+    .home-page main.best-games ul.game-cards div.card div.recto div.text-container p.game-from,
+    .home-page main.best-games ul.game-cards div.card div.verso p.text {
+        font-size: 3.7vw;
+    }
+}

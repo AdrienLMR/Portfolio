@@ -1,0 +1,228 @@
+/*General*/
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes frieze-appear {
+    0% {
+        font-size: 15px;
+        color: var(--text);
+    }
+
+    100% {
+        font-size: 20px;
+        color: var(--yellow);
+    }
+}
+
+@keyframes frieze-disappear {
+    0% {
+        font-size: 20px;
+        color: var(--yellow);
+    }
+
+    100% {
+        font-size: 15px;
+        color: var(--text);
+    }
+}
+
+@media (max-width: 1200px) {
+    @keyframes frieze-appear {
+        0% {
+            font-size: 1.25vw;
+            color: var(--text);
+        }
+
+        100% {
+            font-size: 1.65vw;
+            color: var(--yellow);
+        }
+    }
+
+    @keyframes frieze-disappear {
+        0% {
+            font-size: 1.65vw;
+            color: var(--yellow);
+        }
+
+        100% {
+            font-size: 1.25vw;
+            color: var(--text);
+        }
+    }
+}
+
+/*Main*/
+@keyframes main-left-bar-appear {
+    0% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes main-right-bar-appear {
+    0% {
+        transform: translateX(50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes main-left-bar-disappear {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes main-right-bar-disappear {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+/*Experiences*/
+@keyframes experiences-border {
+    0% {
+        height: 268px;
+        width: 201px;
+        margin: 13px;
+    }
+
+    100% {
+        height: auto;
+        width: 214px;
+        margin: 7px;
+    }
+}
+
+@keyframes experiences-title {
+    0% {
+        font-size: 0px;
+    }
+
+    100% {
+        font-size: 20px;
+    }
+}
+
+
+@keyframes experiences-text {
+    0% {
+        font-size: 0px;
+    }
+
+    100% {
+        font-size: 15px;
+    }
+}
+
+/*Interests*/
+@keyframes interests-top-bar-appear {
+    0% {
+        transform: translateY(var(--top-left));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes interests-left-bar-appear {
+    0% {
+        transform: translateX(var(--top-left));
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes interests-bottom-bar-appear {
+    0% {
+        transform: translateY(var(--bottom-right));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes interests-right-bar-appear {
+    0% {
+        transform: translateX(var(--bottom-right));
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes interests-top-bar-disappear {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(var(--top-left));
+    }
+}
+
+@keyframes interests-left-bar-disappear {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(var(--top-left));
+    }
+}
+
+@keyframes interests-bottom-bar-disappear {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(var(--bottom-right));
+    }
+}
+
+@keyframes interests-right-bar-disappear {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(var(--bottom-right));
+    }
+}

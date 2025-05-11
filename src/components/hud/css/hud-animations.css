@@ -1,0 +1,74 @@
+/*HudBlurryBackground*/
+@keyframes hud-blurry-background {
+    0% {
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        backdrop-filter: blur(3px);
+    }
+}
+
+/*HudHeader*/
+@keyframes hud-header-appear {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(62px);
+    }
+}
+
+@keyframes hud-header-disappear {
+    0% {
+        transform: translateY(62px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes hud-header-appear-little {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(calc(21vw - 13px));
+    }
+}
+
+@keyframes hud-header-disappear-little {
+    0% {
+        transform: translateY(calc(21vw - 13px));
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*GameFinder*/
+@keyframes game-finder {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes game-buttons {
+    from {
+        transform: scale(0.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

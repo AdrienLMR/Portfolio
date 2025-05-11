@@ -1,0 +1,44 @@
+/*HomeBestGames*/
+@keyframes game-card-rotate-on {
+    0% {
+        transform: rotate3d(0, 1, 0, -90deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate3d(0, 1, 0, -90deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes game-card-rotate-off {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: rotate3d(0, 1, 0, 90deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, 90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes game-card-appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

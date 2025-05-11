@@ -1,0 +1,196 @@
+@import './hud.css';
+
+.hud section.hud-game-finder {
+    /*Transform*/
+    padding: 0px 0px 2px 0px;
+    /*Children*/
+    position: relative;
+    /*Visual*/
+    border-radius: 13px;
+    background-color: var(--game-finder-background);
+}
+
+    .hud section.hud-game-finder.off-locked {
+        opacity: 0;
+    }
+
+    .hud section.hud-game-finder.on-locked {
+        opacity: 1;
+    }
+
+    .hud section.hud-game-finder.off-to-on {
+        animation: game-finder 0.5s ease 1;
+        opacity: 1;
+    }
+
+    .hud section.hud-game-finder.on-to-off {
+        animation: game-finder 0.2s ease-out 1 reverse;
+        opacity: 0;
+    }
+
+    .hud section.hud-game-finder p.help {
+        /*Transform*/
+        padding: 10px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        /*Text*/
+        font-size: 22px;
+        color: var(--text);
+    }
+
+    .hud section.hud-game-finder button.delete-tags {
+        /*Transform*/
+        position: absolute;
+        top: 13px;
+        right: 40px;
+        /*Text*/
+        font-size: 15px;
+        color: var(--text);
+        /*Visual*/
+        background-color: transparent;
+        border: none;
+    }
+
+        .hud section.hud-game-finder button.delete-tags:hover {
+            color: var(--game-finder-text-hover);
+        }
+
+
+    .hud section.hud-game-finder ul.tags-scroll {
+        /*Transform*/
+        width: 75%;
+        height: 75px;
+        margin: 10px auto 5px auto;
+        padding: 5px 0px 10px 0px;
+        /*Children*/
+        overflow-y: scroll;
+        /*Visual*/
+        mask-image: linear-gradient( to bottom, transparent, black 10px, black calc(100% - 10px), transparent );
+        mask-repeat: no-repeat, no-repeat;
+        line-height: 0em;
+    }
+
+        .hud section.hud-game-finder ul.tags-scroll button {
+            /*Transform*/
+            margin: 3px;
+            padding: 2px 5px;
+            /*Text*/
+            font-size: 17px;
+            /*Visual*/
+            background-color: transparent;
+            border: 2px solid;
+            border-radius: 3px;
+        }
+
+            .hud section.hud-game-finder ul.tags-scroll button.btn-default {
+                color: var(--text);
+                border-color: var(--game-finder-button-border-default);
+            }
+
+            .hud section.hud-game-finder ul.tags-scroll button.btn-clicked {
+                color: var(--game-finder-text-click);
+                border-color: var(--yellow);
+            }
+
+            .hud section.hud-game-finder ul.tags-scroll button.btn-default:hover {
+                color: var(--game-finder-text-hover);
+                border-color: var(--game-finder-button-border-hover);
+            }
+
+            .hud section.hud-game-finder ul.tags-scroll button.btn-disabled {
+                color: var(--game-finder-text-disabled);
+                border-color: var(--game-finder-button-border-disabled);
+            }
+
+    .hud section.hud-game-finder div.separator {
+        /*Transform*/
+        height: 2px;
+        width: 75%;
+        margin: 0px auto;
+        /*Visual*/
+        background-color: var(--separator);
+    }
+
+    .hud section.hud-game-finder ul.games {
+        /*Transform*/
+        margin: 10px auto 0px auto;
+        padding: 5px 0px;
+        max-height: 50vh;
+        width: 75%;
+        /*Children*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-y: auto;
+        /*Visual*/
+        mask-image: linear-gradient( to bottom, transparent, black 15px, white, black calc(100% - 30px), transparent );
+        mask-repeat: no-repeat, no-repeat;
+    }
+
+        .hud section.hud-game-finder ul.games a.game {
+            /*Transform*/
+            margin: 4px 10px 9px 10px;
+            max-height: 75px;
+            max-width: 150px;
+            /*Children*/
+            display: flex;
+            justify-content: center;
+        }
+
+            .hud section.hud-game-finder ul.games a.game.off-locked {
+                transform: scale(0.2);
+            }
+
+            .hud section.hud-game-finder ul.games a.game.on-locked {
+                transform: scale(1);
+            }
+
+            .hud section.hud-game-finder ul.games a.game.off-to-on {
+                animation: game-buttons 0.7s ease;
+                animation-fill-mode: forwards;
+            }
+
+            .hud section.hud-game-finder ul.games a.game.on-to-off {
+                animation: game-buttons 0.7s ease reverse;
+                animation-fill-mode: forwards;
+            }
+
+            .hud section.hud-game-finder ul.games a.game img.logo {
+                /*Transform*/
+                height: 100%;
+                width: auto;
+                /*Visual*/
+                border: 2px solid black;
+                border-radius: 10px;
+            }
+
+                .hud section.hud-game-finder ul.games a.game img.logo:hover {
+                    /*Visual*/
+                    background-color: transparent;
+                    border: 1px solid white;
+                }
+
+@media (max-width: 700px) {
+    .hud section.hud-game-finder ul.games a.game {
+        max-height: 10.5vw;
+        max-width: 21vw;
+        margin: 4px 1.6vw 9px 1.6vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .hud section.hud-game-finder p.help {
+        font-size: 4.4vw;
+    }
+
+    .hud section.hud-game-finder button.delete-tags {
+        top: 10px;
+        right: 15px;
+        font-size: 4.5vw;
+    }
+
+    .hud section.hud-game-finder ul.tags-scroll button {
+        margin: 0.5vw;
+        font-size: 3.4vw;
+    }
+}

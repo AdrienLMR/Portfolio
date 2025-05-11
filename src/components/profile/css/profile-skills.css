@@ -1,0 +1,122 @@
+@import './profile.css';
+
+.profile-page section.profile-skills {
+    /*Transform*/
+    margin: 5vw 0px;
+    width: 100%;
+    /*Visual*/
+    border-radius: 13px;
+    background-color: rgba(150, 150, 150, 0.10);
+}
+
+    .profile-page section.profile-skills.off-locked, .profile-page section.profile-skills p.text.off-locked, .profile-page section.profile-skills img.image.off-locked {
+        opacity: 0;
+    }
+
+    .profile-page section.profile-skills.on-locked, .profile-page section.profile-skills p.text.on-locked, .profile-page section.profile-skills img.image.on-locked {
+        opacity: 1;
+    }
+
+    .profile-page section.profile-skills.off-to-on, .profile-page section.profile-skills p.text.off-to-on, .profile-page section.profile-skills img.image.off-to-on {
+        animation: appear 1s ease-in-out;
+        opacity: 1;
+    }
+
+    .profile-page section.profile-skills.on-to-off, .profile-page section.profile-skills p.text.on-to-off, .profile-page section.profile-skills img.image.on-to-off {
+        animation: disappear 1s ease-in-out;
+        opacity: 0;
+    }
+
+    .profile-page section.profile-skills p.title {
+        /*Transform*/
+        margin: 13px 0px 0px 0px;
+        /*Children*/
+        display: flex;
+        justify-content: center;
+        /*Text*/
+        font-size: 27px;
+        color: var(--important-text);
+    }
+
+    .profile-page section.profile-skills ul.skill-container {
+        /*Transform*/
+        margin: 15px 0px;
+        /*Children*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+        .profile-page section.profile-skills ul.skill-container div.skill {
+            /*Transform*/
+            position: relative;
+            margin: 10px 10px;
+            height: 70px;
+            width: 70px;
+        }
+
+            .profile-page section.profile-skills ul.skill-container div.skill a {
+                /*Transform*/
+                position: absolute;
+            }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.white.off-to-on,
+                .profile-page section.profile-skills ul.skill-container div.skill a.white.on-locked {
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.white.hover-locked {
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.white.on-to-hover {
+                    animation: disappear 0.3s ease-in-out;
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.white.hover-to-on {
+                    animation: appear 0.3s ease-in-out;
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.colored.off-to-on,
+                .profile-page section.profile-skills ul.skill-container div.skill a.colored.on-locked {
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.colored.hover-locked {
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.colored.on-to-hover {
+                    animation: appear 0.3s ease-in-out;
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a.colored.hover-to-on {
+                    animation: disappear 0.3s ease-in-out;
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-skills ul.skill-container div.skill a img {
+                    /*Transform*/
+                    height: 100%;
+                    width: 100%;
+                }
+
+@media (max-width: 500px) {
+    .profile-page section.profile-skills p.title {
+        font-size: 5.3vw;
+    }
+
+    .profile-page section.profile-skills ul.skill-container {
+        margin: 3vw 0px;
+    }
+
+    .profile-page section.profile-skills ul.skill-container div.skill {
+        margin: 2vw 2vw;
+        height: 14vw;
+        width: 14vw;
+    }
+}

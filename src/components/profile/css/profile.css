@@ -1,0 +1,115 @@
+@import './profile-animations.css';
+
+/*color palet*/
+:root .profile-page {
+    --text: rgba(230, 230, 230, 1);
+    --important-text: white;
+}
+/*End color palet*/
+
+.profile-page {
+    /*Transform*/
+    width: 100vw;
+    /*Childrens*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .profile-page div.fixed-background {
+        /*Transform*/
+        position: fixed;
+        height: 150%;
+        width: 150%;
+        z-index: -1;
+        /*Visual*/
+        background: radial-gradient(circle, var(--background), black);
+    }
+
+    .profile-page a, .profile-page button {
+        /*Other*/
+        cursor: pointer;
+    }
+
+    .profile-page nav.frieze {
+        /*Transform*/
+        position: fixed;
+        top: calc(50vh - 167px);
+        height: 300px;
+        left: 3.5vw;
+        /*Childrens*/
+        display: flex;
+    }
+
+        .profile-page nav.frieze div.bar {
+            /*Transform*/
+            height: 100%;
+            width: 1px;
+            /*Visual*/
+            background-color: white;
+        }
+
+        .profile-page nav.frieze ul.legend {
+            /*Transform*/
+            margin: 0px 0px 0px 13px;
+            /*Childrens*/
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+            .profile-page nav.frieze ul.legend a.start-off {
+                /*Text*/
+                color: var(--text);
+                font-size: 15px;
+            }
+
+            .profile-page nav.frieze ul.legend a.hover {
+                /*Text*/
+                color: var(--yellow);
+                font-size: 20px;
+                /*Visual*/
+                animation: frieze-appear 1s;
+            }
+
+            .profile-page nav.frieze ul.legend a.default {
+                /*Text*/
+                color: var(--text);
+                font-size: 15px;
+                /*Visual*/
+                animation: frieze-disappear 1s;
+            }
+
+            .profile-page nav.frieze ul.legend a:hover {
+                /*Visual*/
+                opacity: 0.8;
+            }
+
+    /*Content*/
+    .profile-page div.content {
+        /*Transform*/
+        width: 70%;
+        max-width: 1500px;
+        /*Childrens*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+@media (max-width: 1200px) {
+    .profile-page div.frieze {
+        height: 25vw;
+    }
+
+        .profile-page div.frieze ul.legend a.start-off {
+            font-size: 1.25vw;
+        }
+
+        .profile-page div.frieze ul.legend a.hover {
+            font-size: 1.65vw;
+        }
+
+        .profile-page div.frieze ul.legend a.default {
+            font-size: 1.25vw;
+        }
+}

@@ -1,0 +1,50 @@
+:root .contact {
+    --border: #999;
+    --text: white;
+    --background: rgba(0, 0, 0, 0.2);
+}
+
+address.contact {
+    /*Transform*/
+    z-index:1;
+    margin: 5vw 0px 40px 0px;
+    max-width: 550px;
+    width: 80%;
+    /*Childrens*/
+    display: flex;
+    justify-content: space-evenly;
+    /*Visual*/
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background-color: var(--background);
+}
+
+    address.contact a.button {
+        /*Transform*/
+        margin: 15px 0px;
+        width: 25%;
+        /*Childrens*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        address.contact a.button img {
+            /*Transform*/
+            max-width: 50px;
+            width: 100%;
+        }
+
+        address.contact a.button p {
+            /*Text*/
+            font-style: normal;
+            text-align: center;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+@media (max-width: 300px) {
+    address.contact a.button p {
+        font-size: 5vw;
+    }
+}

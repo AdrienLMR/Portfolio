@@ -1,0 +1,45 @@
+@import './game-animations.css';
+
+.game-page {
+    /*Children*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+    .game-page button.fixed-background {
+        /*Transform*/
+        position: fixed;
+        height: 150%;
+        width: 150%;
+        z-index: -1;
+    }
+
+    .game-page div.banner { /*Banner must be separated from game-top because of the z-index of the particles*/
+        /*Transform*/
+        position: absolute;
+        height: 140px;
+        width: 100vw;
+        z-index: 1;
+        /*Visuals*/
+        border-bottom: 10px solid black;
+    }
+
+    /*Content*/
+    .game-page div.content {
+        /*Transform*/
+        width: 70%;
+        /*Childrens*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+@media (max-width: 550px) {
+    .game-page div.banner {
+        height: 25.5vw;
+    }
+}

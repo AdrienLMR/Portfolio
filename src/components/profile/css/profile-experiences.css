@@ -1,0 +1,212 @@
+@import './profile.css';
+
+:root .profile-experiences {
+    --border: #999;
+    --background: rgb(255, 255, 255, 0.03);
+    --text-background: rgb(255, 255, 255, 0.07);
+}
+
+.profile-page section.profile-experiences {
+    margin: 5vw 0px;
+}
+
+    .profile-page section.profile-experiences p.text {
+        margin: 0px 0px 10px 0px;
+        display: flex;
+        justify-content: center;
+        font-size: 27px;
+        color: var(--important-text);
+    }
+
+    .profile-page section.profile-experiences ul.container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+        .profile-page section.profile-experiences ul.container li.experience {
+            position: relative;
+            height: 268px;
+            width: 201px;
+            margin: 10px;
+            border: 2px solid var(--border);
+            border-radius: 13px;
+            background-color: var(--background);
+        }
+
+            .profile-page section.profile-experiences ul.container li.experience.off-locked {
+                opacity: 0;
+            }
+
+            .profile-page section.profile-experiences ul.container li.experience.on-locked {
+                opacity: 1;
+            }
+
+            .profile-page section.profile-experiences ul.container li.experience.off-to-on {
+                animation: appear 1s ease-in-out;
+                opacity: 1;
+            }
+
+            .profile-page section.profile-experiences ul.container li.experience.on-to-off {
+                animation: disappear 1s ease-in-out;
+                opacity: 0;
+            }
+
+            .profile-page section.profile-experiences ul.container li.experience div.image-container {
+                height: 80%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 2px solid var(--border);
+            }
+
+                .profile-page section.profile-experiences ul.container li.experience div.image-container.hover-locked {
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.image-container.on-locked {
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.image-container.hover-to-on {
+                    animation: appear 0.3s ease-in-out;
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.image-container.on-to-hover {
+                    animation: disappear 0.3s ease-in-out;
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.image-container img.image {
+                    image-rendering: pixelated;
+                    max-height: 70%;
+                    max-width: 70%;
+                }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.image-container img.image.hover-locked {
+                        opacity: 0;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.image-container img.image.on-locked {
+                        opacity: 1;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.image-container img.image.hover-to-on {
+                        animation: appear 0.3s ease-in-out;
+                        opacity: 1;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.image-container img.image.on-to-hover {
+                        animation: disappear 0.3s ease-in-out;
+                        opacity: 0;
+                    }
+
+            .profile-page section.profile-experiences ul.container li.experience div.text-container {
+                height:20%;
+                background-color: var(--text-background);
+            }
+
+                .profile-page section.profile-experiences ul.container li.experience div.text-container.hover-locked {
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.text-container.on-locked {
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.text-container.hover-to-on {
+                    animation: appear 0.3s ease-in-out;
+                    opacity: 1;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.text-container.on-to-hover {
+                    animation: disappear 0.3s ease-in-out;
+                    opacity: 0;
+                }
+
+                .profile-page section.profile-experiences ul.container li.experience div.text-container p.title {
+                    height: 100%;
+                    margin: 0px 0px 10px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    font-size: 15px;
+                    color: var(--important-text);
+                    animation: experiences-title 0.75s ease;
+                }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.text-container p.title.hover-locked {
+                        opacity: 0;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.text-container p.title.on-locked {
+                        opacity: 1;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.text-container p.title.hover-to-on {
+                        animation: appear 0.3s ease-in-out;
+                        opacity: 1;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.text-container p.title.on-to-hover {
+                        animation: disappear 0.3s ease-in-out;
+                        opacity: 0;
+                    }
+
+            .profile-page section.profile-experiences ul.container li.experience div.description-container {
+                position: absolute;
+                top: 0px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .profile-page section.profile-experiences ul.container li.experience div.description-container p.text {
+                    margin: 10px;
+                    font-size: 12px;
+                    text-align: center;
+                    color: var(--text);
+                }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.description-container p.text.on-locked {
+                        opacity: 1;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.description-container p.text.off-locked {
+                        opacity: 0;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.description-container p.text.on-to-off {
+                        animation: disappear 0.3s ease-in-out;
+                        opacity: 0;
+                    }
+
+                    .profile-page section.profile-experiences ul.container li.experience div.description-container p.text.off-to-on {
+                        animation: appear 0.5s ease-in-out;
+                        opacity: 1;
+                    }
+
+@media (max-width: 500px) {
+    .profile-page section.profile-experiences p.text {
+        font-size: 5.3vw;
+    }
+}
+
+@media (max-width: 300px) {
+    .profile-page section.profile-experiences ul.container li.experience {
+        height: 88vw;
+        width: 67vw;
+    }
+
+        .profile-page section.profile-experiences ul.container li.experience div.description-container p.text {
+            font-size: 4vw;
+        }
+
+        .profile-page section.profile-experiences ul.container li.experience div.text-container p.title {
+            font-size: 5vw;
+        }
+}

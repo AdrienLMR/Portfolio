@@ -1,0 +1,70 @@
+@import './game.css';
+
+.game-page main.game-main {
+    /*Transform*/
+    z-index: 1;
+    padding: 0px 3vw;
+    /*Visuals*/
+    border-radius: 15px;
+    /*Childrens*/
+    display: flex;
+    flex-direction: column;
+}
+
+    .game-page main.game-main p.description,
+    .game-page main.game-main p.tags {
+        /*Transform*/
+        margin: 10px 0px;
+        /*Text*/
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .game-page main.game-main p.description {
+        /*Text*/
+        font-size: 20px;
+    }
+
+    .game-page main.game-main p.tags {
+        /*Text*/
+        font-size: 18px;
+    }
+
+    .game-page main.game-main div.video-container {
+        /*Transform*/
+        margin: 2vw;
+        padding: 0px;
+        width: 600px;
+        height: 300px;
+        /*Childrens*/
+        display: flex;
+        align-self: center;
+        overflow: hidden;
+    }
+
+        .game-page main.game-main div.video-container iframe {
+            /*Transform*/
+            width: stretch;
+            height: stretch;
+            /*Visuals*/
+            background-color: black;
+            border-radius: 15px;
+            border: 3px solid black;
+        }
+
+
+@media (max-width: 800px) {
+    .game-page main.game-main div.video-container {
+        width: 74vw;
+        height: 37vw;
+    }
+
+    .game-page main.game-main p.description {
+        margin: 10px 3vw;
+        font-size: 2.5vw;
+    }
+
+    .game-page main.game-main p.tags {
+        font-size: 2.25vw;
+    }
+}

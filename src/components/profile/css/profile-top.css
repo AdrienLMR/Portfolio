@@ -1,0 +1,36 @@
+.profile-page section.profile-top {
+    /*Transform*/
+    height: 75px;
+    width: 100%;
+    /*Childrens*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .profile-page section.profile-top p {
+        /*Text*/
+        color: var(--important-text);
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .profile-page section.profile-top img {
+        /*Transform*/
+        max-height: 30px;
+        max-width: 10%;
+        height: auto;
+        width: auto;
+    }
+
+@media (max-width: 800px) {
+    .profile-page section.profile-top p {
+        font-size: 4.4vw;
+    }
+}
+
+@media (max-width: 350px) {
+    .profile-page section.profile-top {
+        height: 21vw;
+    }
+}

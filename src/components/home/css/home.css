@@ -1,0 +1,46 @@
+@import './home-animations.css';
+
+/*color palet*/
+:root .home-page {
+    /*Colors*/
+    --home-color-text: white;
+    /*Fonts size*/
+    --font-size-page-title: 30px;
+    --font-size-component-title: 20px;
+    --font-size-component-subtitle: 16px;
+    --font-size-component-text: 14px;
+}
+/*End color palet*/
+
+.home-page {
+    /*Transform*/
+    height: 100vh;
+    width: 100vw;
+    /*Text*/
+    text-align: center;
+    font-size: var(--font-size-page-title);
+    color: var(--home-color-text);
+}
+
+    .home-page p {
+        /*Visual*/
+        color: var(--home-color-text);
+    }
+
+    .home-page img.background {
+        /*Transform*/
+        position: fixed;
+        height: 120%;
+        width: 120%;
+        top: -10%;
+        left: -10%;
+        z-index: -1;
+        /*Background*/
+        background: radial-gradient(circle, var(--background), black);
+    }
+
+    .home-page div.center {
+        /*Children*/
+        display: flex;
+        justify-content: center;
+    }

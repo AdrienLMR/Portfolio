@@ -1,0 +1,42 @@
+@import './hud-animations.css';
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Internet Explorer */
+*::-ms-scrollbar-thumb {
+    display: none;
+}
+
+/*color palet*/
+:root {
+    --text: white;
+}
+/*End color palet*/
+
+.hud {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+}
+
+.hud a, .hud button {
+    cursor: pointer;
+}
+
+:root .hud-game-finder {
+    /*GameFinder*/
+    --game-finder-background: rgba(0, 0, 0, 0.55);
+    --game-finder-button-border-default: #CCC;
+    --game-finder-button-border-hover: rgba(100, 100, 100, 1);
+    --game-finder-button-border-disabled: rgba(50, 50, 50, 1);
+    --game-finder-text-hover: #CCC;
+    --game-finder-text-disabled: #999;
+    --game-finder-text-click: rgb(230, 230, 230);
+    /*Separator*/
+    --separator: white;
+    /*Games*/
+    --games-button-border: white;
+    --games-button-background: rgba(255, 255, 255, 0.1);
+}

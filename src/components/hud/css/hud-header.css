@@ -1,0 +1,223 @@
+@import './hud.css';
+
+.hud section.hud-header {
+    /*Transform*/
+    position: relative;
+    height: 75px;
+    width: 100%;
+}
+
+    .hud section.hud-header img.triangle {
+        /*Transform*/
+        position: absolute;
+        height: 10px;
+        width: 8px;
+        bottom: -4px;
+    }
+
+        .hud section.hud-header img.triangle.right {
+            /*Transform*/
+            right: 0px;
+            transform: scaleX(-1);
+        }
+
+    .hud section.hud-header div.header-border {
+        /*Transform*/
+        position: absolute;
+        top: -62px; /*100%-13px*/
+        height: 100%;
+        width: 100%;
+        /*Visual*/
+        border-radius: 0px 0px 10px 10px;
+        background-color: var(--yellow);
+    }
+
+        .hud section.hud-header div.header-border.on-to-off {
+            animation: hud-header-disappear 0.2s ease-in-out;
+            transform: translateY(0px);
+        }
+
+        .hud section.hud-header div.header-border.off-to-on {
+            animation: hud-header-appear 0.4s ease-in-out;
+            transform: translateY(62px);
+        }
+
+        .hud section.hud-header div.header-border.on-locked {
+            transform: translateY(62px);
+        }
+
+        .hud section.hud-header div.header-border.off-locked {
+            transform: translateY(0px);
+        }
+
+        .hud section.hud-header div.header-border div.header-background {
+            /*Transform*/
+            height: calc(100% - 3px);
+            /*Visual*/
+            border-radius: 0px 0px 10px 10px;
+            background-color: black;
+        }
+
+            .hud section.hud-header div.header-border div.header-background div.header-container {
+                /*Children*/
+                display: flex;
+                justify-content: space-between;
+            }
+
+                .hud section.hud-header div.header-border div.header-background div.header-container div.left-container {
+                    /*Children*/
+                    display: flex;
+                }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.img {
+                        /*Transform*/
+                        padding: 3px 0px 0px 33px;
+                        height: 100%;
+                        /*Children*/
+                        align-content: center;
+                    }
+
+                        .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.img img {
+                            /*Transform*/
+                            height: 67px;
+                            width: 67px;
+                        }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.name, a.occupation {
+                        /*Transform*/
+                        align-content: flex-end;
+                        /*Visual*/
+                        color: var(--text);
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.name {
+                        /*Transform*/
+                        margin: 0px 0px 7px 27px;
+                        /*Text*/
+                        font-size: 35px;
+                        font-weight: bold;
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.occupation {
+                        /*Transform*/
+                        margin: 0px 0px 10px 13px;
+                        /*Text*/
+                        font-size: 20px;
+                    }
+
+                .hud section.hud-header div.header-border div.header-background div.header-container menu {
+                    /*Transform*/
+                    width: 400px;
+                    /*Children*/
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu.menu-text {
+                        /*Transform*/
+                        margin: 0px 0px 10px 0px;
+                        /*Children*/
+                        align-items: flex-end;
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu.menu-image {
+                        /*Transform*/
+                        margin: 3px 0px 0px 0px;
+                        /*Children*/
+                        align-items: center;
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu a,
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu button {
+                        /*Visual*/
+                        background-color: transparent;
+                        border: none;
+                    }
+
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu.menu-text a,
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu.menu-text button {
+                        /*Text*/
+                        font-size: 23px;
+                        /*Visual*/
+                        color: var(--text);
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu.menu-image a img {
+                        /*Transform*/
+                        margin: 1px 0px 0px 0px;
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu a img,
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu button img {
+                        /*Transform*/
+                        height: 25px;
+                        width: 25px;
+                    }
+
+                    .hud section.hud-header div.header-border div.header-background div.header-container menu button.language img {
+                        /*Transform*/
+                        margin-bottom: -5px;
+                    }
+
+@media (hover: hover) {
+    .hud section.hud-header div.header-border div.header-background div.header-container menu a:hover,
+    .hud section.hud-header div.header-border div.header-background div.header-container menu button:hover {
+        /*Visual*/
+        -webkit-filter: hue-rotate(0deg) brightness(50%) grayscale(50%);
+        filter: hue-rotate(00deg) brightness(50%) grayscale(50%);
+        color: gray;
+    }
+}
+
+@media (max-width: 750px) {
+    .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.img {
+        padding: 3px 0px 0px 4.4vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .hud section.hud-header div.header-border div.header-background div.header-container menu {
+        width: 220px;
+        margin: 0px 0px 6.5px 0px;
+    }
+}
+
+@media (max-width: 350px) {
+    .hud section.hud-header {
+        height: 21vw;
+    }
+
+        .hud section.hud-header div.header-border {
+            top: calc(-21vw + 13px);
+        }
+
+            .hud section.hud-header div.header-border.on-to-off {
+                animation: hud-header-disappear-little 0.2s ease-in-out;
+                transform: translateY(0px);
+            }
+
+            .hud section.hud-header div.header-border.off-to-on {
+                animation: hud-header-appear-little 0.4s ease-in-out;
+                transform: translateY(calc(21vw - 13px));
+            }
+
+            .hud section.hud-header div.header-border.on-locked {
+                transform: translateY(calc(21vw - 13px));
+            }
+
+            .hud section.hud-header div.header-border div.header-background div.header-container div.left-container a.img img {
+                height: 19vw;
+                width: 19vw;
+            }
+
+            .hud section.hud-header div.header-border div.header-background div.header-container menu {
+                width: 62vw;
+            }
+
+                .hud section.hud-header div.header-border div.header-background div.header-container menu a img,
+                .hud section.hud-header div.header-border div.header-background div.header-container menu button img {
+                    height: 7.1vw;
+                    width: 7.1vw;
+                }
+}
