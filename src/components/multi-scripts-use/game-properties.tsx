@@ -918,7 +918,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
     ["ultimate-button", {
         name: "ULTIMATE BUTTON",
         href: "ultimate-button",
-        tagsIds: [1, 102, 104, 105, 207, 301, 401, 500, 501],
+        tagsIds: [2, 102, 104, 105, 207, 301, 401, 500, 501],
         download: true,
         description: [
             <span><b>Ultimate Button</b> is a game I developed during my <b>first Game Jam</b>. It was organized by some students at ISART DIGITAL. The theme was “<b>Make this button fun</b>”, it comes from <b>Jonas Tyroller</b>'s video on Youtube: <a href="https://www.youtube.com/watch?v=7L1B5YaxxoA" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=7L1B5YaxxoA</a>.<br />
@@ -977,7 +977,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
     ["carroot", {
         name: "CARROOT",
         href: "carroot",
-        tagsIds: [2, 102, 104, 105, 200, 301, 401, 500, 503],
+        tagsIds: [3, 102, 104, 105, 200, 301, 401, 500, 503],
         download: true,
         description: [
             <span><b>Carroot</b> is a Game I made during the <b>Global Game Jam 2023</b>. The theme was “<b>Root</b>”.
@@ -1041,7 +1041,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
     ["flowtex", {
         name: "FLOWTEX",
         href: "flowtex",
-        tagsIds: [2, 102, 104, 105, 207, 301, 401, 500, 503],
+        tagsIds: [3, 102, 104, 105, 207, 301, 401, 500, 503],
         download: true,
         description: [
             <span>I worked on <b>Flowtex</b> during the <b>Scientific Game Jam 2023</b>. The theme was to create an <b>educational game</b> on a <b>thesis</b> about <b>vortices in a quantum fluid</b>, with the help of a <b>physicist</b> who guided us on-site.
@@ -1120,7 +1120,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
     ["la-vie-nulle-de-robert", {
         name: "LA VIE NULLE DE ROBERT",
         href: "la-vie-nulle-de-robert",
-        tagsIds: [3, 102, 104, 105, 301, 401, 500, 501, 503],
+        tagsIds: [4, 102, 104, 105, 301, 401, 500, 501, 503],
         download: true,
         description: [
             <span>I worked on <b>La Vie Nulle de Robert</b> during the <b>Global Game Jam 2024</b>. The theme was : <b>Make us laugh</b>.
@@ -1184,7 +1184,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
     ["de-exorcismis", {
         name: "DE EXORCISMIS",
         href: "de-exorcismis",
-        tagsIds: [3, 102, 104, 105, 301, 401, 500, 503],
+        tagsIds: [4, 102, 104, 105, 301, 401, 500, 503],
         download: false,
         description: [
             <span>I worked on <b>De Exorcismis</b> during the <b>Scientific Game Jam 2024</b>. The theme was to create an <b>educational game</b> on a <b>thesis</b> about <b>exorcisms during the middle age</b>, with the help of a <b>historian</b> who guided us on-site.
@@ -1260,7 +1260,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
     ["captain-nemo", {
         name: "CAPTAIN NEMO",
         href: "captain-nemo",
-        tagsIds: [4, 102, 104, 105, 301, 401, 500, 501],
+        tagsIds: [5, 102, 104, 105, 301, 401, 500, 501],
         download: true,
         description: [
             <span>I worked on <b>Captain Nemo</b> during the <b>Global Game Jam 2025</b>. The theme was : <b>Bubble</b>.
@@ -1282,6 +1282,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
                 Programme de développement : <b>Unity, C#</b>.<br />
                 Durée du projet : <b>deux jours</b>.<br />
                 Equipe de <b>six</b>.</span>],
+        // videoRef: "https://www.youtube.com/embed/hDzQLojy1rc",
         nGameImages: 2,
         colors: {
             titleColor: "#4F7A88",
@@ -1320,11 +1321,10 @@ export const gameProperties: Map<string, GameProperties> = new Map([
             }
         ],
     }],
-    ////
     ["scarattack", {
         name: "SCARATTACK",
         href: "scarattack",
-        tagsIds: [4, 102, 104, 105, 301, 401, 500, 501],
+        tagsIds: [5, 102, 104, 106, 301, 401, 500, 501],
         download: true,
         description: [
             <span>I worked on <b>Scarattack</b> during the <b>Scientific Game Jam 2025</b>. The theme was to create an <b>educational game</b> on a <b>thesis</b> about <b>the invasion of japanese beetles in europe</b>, with the help of a <b>scientist</b> who guided us on-site.
@@ -1349,6 +1349,7 @@ export const gameProperties: Map<string, GameProperties> = new Map([
                 Durée du projet : <b>deux jours</b>.<br />
                 Equipe de <b>cinq</b>.</span>
             ],
+        // videoRef: "https://www.youtube.com/embed/hDzQLojy1rc",
         nGameImages: 3,
         colors: {
             titleColor: "#317029",
@@ -1390,6 +1391,80 @@ export const gameProperties: Map<string, GameProperties> = new Map([
             {
                 names: ["Ambre DECHAMPS"],
                 job: JobType.S
+            }
+        ],
+    }],
+    ["teletoile", {
+        name: "TELETOILE",
+        href: "teletoile",
+        tagsIds: [5, 102, 104, 105, 302, 402, 500],
+        download: false,
+        description: [
+            <span>I worked on <b>Teletoile</b> during a game jam organized by the <b>Cité de la sciences</b> in Paris.
+                The goal was to create a game around the theme <b>Meteor</b> that would be displayed on a <b>planetarium</b>. The <b>first ever</b> game jam of this using this feature !
+                <br />
+                https://www.cite-sciences.fr/fr/au-programme/activites-spectacles/le-planetarium/game-jam-des-etoiles
+                <br /><br />
+                For obvious reasons the game is not playable but also because with all those new constraints,
+                making a game was really hard and we ended up making an interactive simulation and not a real game.
+                <br /><br />
+                Development engine and language: <b>Unreal, Blueprint</b>.<br />
+                Project length: <b>Two days</b>.<br />
+                A <b>six-person</b> team.</span>,
+
+            <span>J'ai travaillé sur <b>Teletoile</b> pendant une game jam organizée par la <b>Cité des sciences</b> à Paris.
+                Le but était de créer un jeu autour du thème <b>Météore</b> pour qu'il soit affiché sur un <b>planétarium</b>. C'était la <b>première</b> game jam dans l'histoire utilisant un planétarium !
+                <br />
+                https://www.cite-sciences.fr/fr/au-programme/activites-spectacles/le-planetarium/game-jam-des-etoiles
+                <br /><br />
+                Pour des raisons évidentes le jeu n'est pas jouable mais aussi parce qu'avec toutes ces nouvelles contraintes,
+                créer un jeu fut vraiment difficile et nous avons fini par créer une simulation interactive et non un vrai jeu.
+                <br /><br />
+                Programme de développement : <b>Unreal, Blueprint</b>.<br />
+                Durée du projet : <b>deux jours</b>.<br />
+                Equipe de <b>six</b>.</span>
+            ],
+        nGameImages: 0,
+        colors: {
+            titleColor: "#5B482D",
+            textColor: "#5B482D",
+            tagsColor: "white",
+            backgroundColors: "#2D1F19, #000000",
+            mainBackgroundColor: "0, 0, 0",
+            bannerColor: "#2D1F19, black",
+            downloadColor: "white",
+            downloadColorHover: "white",
+        },
+        particlesSettingsManager: new ParticlesDataManager(
+            new P_RandomSettings(E_ParticleBehavior.Linear, Math.PI / 1000, Math.PI / 2),
+            {
+                nParticles: 100,
+                mouseAreaMinMax: new Vector2(50, 100),
+                speedMinMax: new Vector2(0.15, 0.2),
+                sprites: ["rainbow-square-yellow"],
+                size: Maths2.One.Multiply(2),
+            },
+            new ModifiersManager(
+                [E_Modifier.PositionOutsideMouseArea],
+                [E_Modifier.PositionOutsideMouseArea],
+                [E_Modifier.PositionOutsideMouseArea],
+                [E_Modifier.PositionOutsideMouseArea]
+            ),
+            new MouseBehaviorsManager(new PCMouseBehaviors_Up_RepelAll(new Vector2(2, 5)), new PCMouseBehaviors_Down_AttractAll(new Vector2(2, 4))),
+            new StylesManager([new PCStyle_RandomRotationAtSpawn(), new PCStyle_RandomColorAtSpawn([0, 60, 120, 180, 240, 300]), new PCStyle_MouseUp_RandomRotationNear()]),
+        ),
+        teammates: [
+            {
+                names: ["Simon CHAUVIN", "Léo SUY"],
+                job: JobType.GDP
+            },
+            {
+                names: ["Valentin TRAN"],
+                job: JobType.GA
+            },
+            {
+                names: ["Romain ENSELME", "Yutsil SANCHEZ"],
+                job: JobType.GD
             }
         ],
     }],
