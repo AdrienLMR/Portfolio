@@ -26,9 +26,8 @@ export default class GameTop<P extends GameProps, S extends I_AnimationState> ex
                         </p>
                     </div>
                     {
-                        GetCurrentGameProperties().download &&
-                        <DownloadButton /> ||
-                        !GetCurrentGameProperties().download &&
+                        (GetCurrentGameProperties().download &&
+                        <DownloadButton />) ||
                         <img className="no-download"
                             src={PORTFOLIO_URL + NO_DOWNLOAD_IMG_PATH}
                             alt="No Download" />
@@ -66,7 +65,10 @@ export class DownloadButton<P, S extends GameTopState> extends AnimatedElement<P
             <a className={"download-button" + this.GetCurrentStateName()}
                 onMouseEnter={() => this.OnMouseHover(true)}
                 onMouseLeave={() => this.OnMouseHover(false)}
-                href={"https://drive.google.com/drive/folders/1bYj2pksk0kZkFMnmOuLWyg0qQXrSAG-V?usp=sharing"} target="_blank"
+                href={"https://drive.google.com/drive/folders/1bYj2pksk0kZkFMnmOuLWyg0qQXrSAG-V?usp=sharing"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Example"
             ></a>
         )
     }

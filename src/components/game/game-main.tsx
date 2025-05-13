@@ -45,10 +45,6 @@ export default class GameMain<P extends GameProps, S> extends React.Component<P,
 }
 
 export class YoutubeEmbed<P, S> extends React.Component<P, S> {
-    constructor(props: P) {
-        super(props);
-    }
-
     render(): React.ReactNode {
         return (
             <div className="video-container">

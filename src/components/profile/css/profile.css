@@ -58,13 +58,19 @@
             flex-direction: column;
         }
 
-            .profile-page nav.frieze ul.legend a.start-off {
+            .profile-page nav.frieze ul.legend button.start-off {
+                /*Visual*/
+                background-color: transparent;
+                border-style: none;
                 /*Text*/
                 color: var(--text);
                 font-size: 15px;
             }
 
-            .profile-page nav.frieze ul.legend a.hover {
+            .profile-page nav.frieze ul.legend button.hover {
+                /*Visual*/
+                background-color: transparent;
+                border-style: none;
                 /*Text*/
                 color: var(--yellow);
                 font-size: 20px;
@@ -72,7 +78,10 @@
                 animation: frieze-appear 1s;
             }
 
-            .profile-page nav.frieze ul.legend a.default {
+            .profile-page nav.frieze ul.legend button.default {
+                /*Visual*/
+                background-color: transparent;
+                border-style: none;
                 /*Text*/
                 color: var(--text);
                 font-size: 15px;
@@ -80,7 +89,7 @@
                 animation: frieze-disappear 1s;
             }
 
-            .profile-page nav.frieze ul.legend a:hover {
+            .profile-page nav.frieze ul.legend button:hover {
                 /*Visual*/
                 opacity: 0.8;
             }

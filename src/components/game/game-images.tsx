@@ -88,7 +88,7 @@ class SideImage<P extends I_GameImageProps, S extends I_AnimationState> extends 
                     onClick={() => this.ClickOnImage()}>
                     <img className={"image" + this.GetCurrentStateName()}
                         src={this.props.imagePath}
-                        alt="Game image"
+                        alt="Game"
                         onMouseEnter={() => this.SetAnimHover(true)}
                         onMouseLeave={() => this.SetAnimHover(false)} />
                 </button>
@@ -167,7 +167,7 @@ class MiddleImage<P, S extends I_GameImageState> extends AnimatedElement<P, S> {
     render(): React.ReactNode {
         return (
             <div className="container">
-                <img className="middle" src={this.state.src} alt="Game image" />
+                <img className="middle" src={this.state.src} alt="Game" />
                 <div className={"fade-in-out" + this.GetCurrentStateName()} onAnimationEnd={() => this.SetAnimInOut()}></div>
             </div>
         )

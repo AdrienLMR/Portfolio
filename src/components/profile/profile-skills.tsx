@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import Traduction from '../multi-scripts-use/traduction';
 
 import AnimatedElement, { E_AnimationState, I_AnimationState } from "../multi-scripts-use/mother-classes/animated-element";
@@ -83,10 +81,10 @@ class SkillsElement<P extends I_SkillsElementProps, S extends I_AnimationState> 
             <div key={this.props.key} className="skill"
                 onMouseEnter={() => this.OnHover(true)}
                 onMouseLeave={() => this.OnHover(false)}>
-                <a className={"white" + this.GetCurrentStateName()} onAnimationEnd={() => this.SetAnimToLocked()} href={this.props.skillParam.href} target="_blank">
+                <a className={"white" + this.GetCurrentStateName()} onAnimationEnd={() => this.SetAnimToLocked()} href={this.props.skillParam.href} target="_blank" rel="noreferrer">
                     <img src={PORTFOLIO_URL + this.props.skillParam.image + "_white.png"} alt={this.props.skillParam.alt} />
                 </a>
-                <a className={"colored" + this.GetCurrentStateName()} href={this.props.skillParam.href} target="_blank">
+                <a className={"colored" + this.GetCurrentStateName()} href={this.props.skillParam.href} target="_blank" rel="noreferrer">
                     <img src={PORTFOLIO_URL + this.props.skillParam.image + "_colored.png"} alt={this.props.skillParam.alt} />
                 </a>
             </div>

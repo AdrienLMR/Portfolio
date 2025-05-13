@@ -254,7 +254,7 @@ export default abstract class P_Base<P extends I_ParticleProps, S extends I_Part
 
     render() {
         return (
-            <img className="particle" src={PORTFOLIO_URL + "games/_particles/" + this.state.sprite + ".png"} alt="Particle" style={this.GetStyle()} />
+            <img className="particle" src={PORTFOLIO_URL + "games/particles/" + this.state.sprite + ".png"} alt="Particle" style={this.GetStyle()} />
         )
     }
 }

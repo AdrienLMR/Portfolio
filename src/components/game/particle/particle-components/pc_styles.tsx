@@ -1,5 +1,4 @@
-import Utils, { Lists, Maths, Maths2, Maths3, Vector3 } from "../../../multi-scripts-use/utils";
-import ParticleUtils from "../particle-utils";
+import { Lists, Maths, Maths2, } from "../../../multi-scripts-use/utils";
 import ParticleComponents from "./particle-components";
 
 import { MovementParams } from "./pc_modifiers";
@@ -129,7 +128,7 @@ export class PCStyle_UnitedInfiniteRotation extends PCStyle_Rotation {
         this.rotateClockwiseSpeed = rotateClockwiseSpeed;
 
         if (rotateClockwiseSpeed)
-            this.rotateClockwiseSpeed = Math.round(Math.random()) == 0 ?
+            this.rotateClockwiseSpeed = Math.round(Math.random()) === 0 ?
                 rotateClockwiseSpeed : rotateClockwiseSpeed * - 1;
     }
 
@@ -154,7 +153,7 @@ export class PCStyle_NotUnitedInfiniteRotation extends PCStyle_Rotation {
         style.rotation = Maths.GetRandomRound(360);
 
         if (this.rotateClockwiseSpeed)
-            style.rotateClockwiseSpeed = Math.round(Math.random()) == 0 ?
+            style.rotateClockwiseSpeed = Math.round(Math.random()) === 0 ?
                 this.rotateClockwiseSpeed : this.rotateClockwiseSpeed * - 1;
     }
 

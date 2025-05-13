@@ -18,7 +18,7 @@ export default class Contacts extends React.Component {
     render() {
         return (
             <address className="contact">
-                <a className="button linkedin" href="https://www.linkedin.com/in/adrien-lemaire-a106b0229/" target="_blank">
+                <a className="button linkedin" href="https://www.linkedin.com/in/adrien-lemaire-a106b0229/" target="_blank" rel="noreferrer">
                     <img src={PORTFOLIO_URL + "profile/contacts/linkedin.png"} alt="LinkedIn" />
                     <p>LinkedIn</p>
                 </a>

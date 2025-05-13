@@ -11,7 +11,7 @@ export default class Home<P, S> extends React.Component<P, S> {
     render() {
         return (
             <div className="home-page">
-                <img className="background" />
+                <img className="background" alt="Background"/>
                 <BestGames />
                 <div className="center">
                     <Contacts />

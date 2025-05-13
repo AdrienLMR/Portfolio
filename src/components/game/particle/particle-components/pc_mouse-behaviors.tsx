@@ -68,7 +68,7 @@ export abstract class PCMouseBehaviors_Up extends PCMouseBehaviors {
     public SetFriction(movement: MovementParams): E_MovementState {
         movement.currentSpeed = ParticleUtils.GetSpeedWithFriction(movement.currentSpeed, movement.defaultSpeed);
 
-        return movement.currentSpeed == movement.defaultSpeed ? E_MovementState.MOVE : E_MovementState.VOID;
+        return movement.currentSpeed === movement.defaultSpeed ? E_MovementState.MOVE : E_MovementState.VOID;
     }
 }
 

@@ -144,10 +144,10 @@ export class ProfileScrollFrieze<P extends I_ProfileScrollFriezeProps, S extends
             <nav className="frieze">
                 <div className="bar"></div>
                 <ul className='legend'>
-                    <a className={this.state.elementsFriezeState[0]} onClick={() => this.ScrollTo(0)}>{Traduction.Translate(0, friezeMap)}</a>
-                    <a className={this.state.elementsFriezeState[1]} onClick={() => this.ScrollTo(1)}>{Traduction.Translate(1, friezeMap)}</a>
-                    <a className={this.state.elementsFriezeState[2]} onClick={() => this.ScrollTo(2)}>{Traduction.Translate(2, friezeMap)}</a>
-                    <a className={this.state.elementsFriezeState[3]} onClick={() => this.ScrollTo(3)}>{Traduction.Translate(3, friezeMap)}</a>
+                    <button className={this.state.elementsFriezeState[0]} onClick={() => this.ScrollTo(0)}>{Traduction.Translate(0, friezeMap)}</button>
+                    <button className={this.state.elementsFriezeState[1]} onClick={() => this.ScrollTo(1)}>{Traduction.Translate(1, friezeMap)}</button>
+                    <button className={this.state.elementsFriezeState[2]} onClick={() => this.ScrollTo(2)}>{Traduction.Translate(2, friezeMap)}</button>
+                    <button className={this.state.elementsFriezeState[3]} onClick={() => this.ScrollTo(3)}>{Traduction.Translate(3, friezeMap)}</button>
                 </ul>
             </nav>
         );

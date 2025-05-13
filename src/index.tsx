@@ -73,10 +73,10 @@ export default class EntryPoint<P, S extends I_Entrypoint> extends React.Compone
       !currentPage.includes(GAME)) {
       window.scrollTo({ top: 0, behavior: "auto" });
 
-      this.state = {
+      this.setState({
         ...this.state,
         currentPage: currentPage,
-      }
+      })
     }
 
     return jsxElement;

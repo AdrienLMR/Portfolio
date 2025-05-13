@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import { GAME, PAGE_UPDATED_EVENT, PORTFOLIO_URL, eventPageUpdated } from "../../index";
+import { GAME, PAGE_UPDATED_EVENT, eventPageUpdated } from "../../index";
 
 import Traduction from '../multi-scripts-use/traduction';
 import { GameProperties, GetAssetsPath, gameProperties } from '../multi-scripts-use/game-properties';
@@ -150,10 +150,10 @@ export default class GameFinder<P, S extends I_GameFinderState> extends Animated
                         {Traduction.Translate(4, hudMap)}
                     </p>
                     {
-                        window.innerWidth > 500 &&
+                        (window.innerWidth > 500 &&
                         <button className="delete-tags" onClick={() => this.DeleteAllTags()}>
                             {Traduction.Translate(5, hudMap)}
-                        </button>
+                        </button>)
                         ||
                         <button className="delete-tags" onClick={() => this.DeleteAllTags()}>X</button>
                     }

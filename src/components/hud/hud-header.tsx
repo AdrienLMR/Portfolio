@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 import { PROFILE, HOME, eventPageUpdated, PAGE_UPDATED_EVENT, PORTFOLIO_URL } from "../../index";
@@ -119,7 +118,7 @@ export default class Header<P, S extends I_HudState> extends AnimatedElement<P, 
     }
 
     private GetLanguageIcon():string{
-        return PORTFOLIO_URL + (Traduction.GetKeyLanguage() == 0 ? "hud/language-en.png" : "hud/language-fr.png");
+        return PORTFOLIO_URL + (Traduction.GetKeyLanguage() === 0 ? "hud/language-en.png" : "hud/language-fr.png");
     }
 
     render() {
@@ -132,7 +131,7 @@ export default class Header<P, S extends I_HudState> extends AnimatedElement<P, 
                 <div className={"header-border" + this.GetCurrentStateName()} onAnimationEnd={() => this.SetAnimToLocked()}>
                     <div className="header-background">
                         {
-                            this.state.animationState != E_AnimationState.OffLocked &&
+                            this.state.animationState !== E_AnimationState.OffLocked &&
                             <div className="header-container">
                                 <div className="left-container">
                                     <Link className="img" to={PROFILE} onClick={this.RemoveGameFinder}>
@@ -148,7 +147,7 @@ export default class Header<P, S extends I_HudState> extends AnimatedElement<P, 
                                     }
                                 </div>
                                 {
-                                    window.innerWidth > 450 &&
+                                    (window.innerWidth > 450 &&
                                     <menu className="menu-text">
                                         <button className="language" onClick={this.Language}>
                                             <img src={this.GetLanguageIcon()} alt="Language" />
@@ -156,7 +155,7 @@ export default class Header<P, S extends I_HudState> extends AnimatedElement<P, 
                                         <Link to={HOME} onClick={this.RemoveGameFinder}>{Traduction.Translate(1, hudMap)}</Link>
                                         <Link to={PROFILE} onClick={this.RemoveGameFinder}>{Traduction.Translate(0, hudMap)}</Link>
                                         <button onClick={this.GameFinderClick}>{Traduction.Translate(3, hudMap)}</button>
-                                    </menu>
+                                    </menu>)
                                     ||
                                     <menu className="menu-image">
                                         <button className="language" onClick={this.Language}>

@@ -65,7 +65,7 @@ export class GameCard<P extends I_GameCardProps, S extends I_AnimationState> ext
                 onMouseLeave={() => this.SetAnimHover(false)}>
                 <div className={"recto" + this.GetCurrentStateName()} onAnimationEnd={this.SetAnimToLocked}>
                     <p className="title">{GetGameProperties(bestGameIndexs.get(this.props.index)).name}</p>
-                    <img className="photo" src={GetAssetsPath(bestGameIndexs.get(this.props.index)) + "game-logo.png"} alt="Game Photo" />
+                    <img className="photo" src={GetAssetsPath(bestGameIndexs.get(this.props.index)) + "game-logo.png"} alt="Game" />
                     <div className="text-container">
                         <p className='text'>{Traduction.Translate(this.props.index, descriptionRectoMap)}</p>
                         <p className='game-from'>{Traduction.Translate(this.props.index, madeFromRectoMap)}</p>

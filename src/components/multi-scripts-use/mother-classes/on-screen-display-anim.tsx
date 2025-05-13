@@ -44,14 +44,14 @@ export default abstract class OnScreenDisplayAnim<P extends I_OnScreenDisplayAni
     public OnViewUpdate() {
         const elementList: HTMLCollectionOf<Element> = document.getElementsByClassName(this.state.className);
 
-        if (!elementList || elementList.length != 1)
+        if (!elementList || elementList.length !== 1)
             return;
 
         const selfRect: DOMRect = elementList[0].getBoundingClientRect();
 
         let isViewHover: boolean = selfRect.top < window.innerHeight - OFFSET_VIEW_HOVER && selfRect.bottom > OFFSET_VIEW_HOVER;
 
-        if (isViewHover != this.state.isViewHover)
+        if (isViewHover !== this.state.isViewHover)
             (isViewHover) ? this.SetAnimOnOff(true) : this.SetAnimOnOff(false);
 
         if (window.innerHeight / 2 - 50 <= selfRect.bottom && window.innerHeight / 2 + 50 >= selfRect.top) {
